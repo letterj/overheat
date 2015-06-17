@@ -1,0 +1,26 @@
+   52  source .heatrc_iad 
+   53  heat stack-list
+
+   60  vim templates/dbclusterbase.yml 
+
+   61  supernova cfteam --os-region=IAD sshkey-list
+   62  supernova cfteam --os-region=IAD ssh-key-list
+   63  supernova cfteam --os-region=IAD 
+   64  supernova cfteam --os-region=IAD --help
+
+   66  supernova cfteam --os-region=IAD keypair-list
+
+   67  heat stack-create dbshard_test_cluster --template-file templates/dbclusterbase.yml -P "ssh-key=smallrax_rsa"
+
+   74  heat stack-create dbshard_test_cluster --template-file templates/dbclusterbase.yml -P "ssh-key=smallrax_rsa"
+
+   89  heat stack-list
+
+   90  supernova cfteam list
+
+   97  head stack-show dbshard_test_cluster01
+
+  100  heat stack-list
+
+  101  heat stack-delete  998487b9-0621-4e82-b76b-626405519793
+
